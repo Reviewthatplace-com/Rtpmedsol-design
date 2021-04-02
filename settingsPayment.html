@@ -380,43 +380,56 @@
                 <!-- ============================================================== -->
                 <!-- Info box -->
                 <!-- ============================================================== -->
-                    <!--<div class="text-right">
-                        <button type="button" class="btn waves-effect waves-light btn-success mb-2 font-weight-bold FontSizeButton" data-toggle="modal" data-target="#Addalert"><i class="fas fa-plus"></i></button>
-                    </div>-->
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="table-responsive-xl">
-                                <table id="config-table" class="table display table-bordered table-striped no-wrap">
-                                    <thead class="thead-dark">
-                                        <tr>
-                                            <th>Login ID</th>
-                                            <th>Transaction Key</th>
-                                            <th>Account Type</th>
-                                        </tr>
-                                    </thead>
-        
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" id="" name="">
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" id="" name="">
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" id="" name="">
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                    <div class="text-left row">
+                        <div class="switch ml-3">
+                            <label>
+                                <input type="checkbox" unchecked class="js-switch switchSandbox" data-color="#00c292" data-size="medium"  onclick="myFunction()"/>
+                                <label for="" class="font-weight-bolder">Production</label>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="card col-xl-5 px-5 mr-3 ml-3">
+                            <div class="card-body">
+                                <fieldset class="floating-labels">
+                                <h1 class="text-center">Sandbox</h1>
+                                    <h4 class="font-weight-bold">Login ID:</h4>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control required" id="" placeholder="Login ID"><span class="bar"></span>
+                                    </div>
+                                    <h4 class="font-weight-bold">Transaction Key:</h4>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control required" id="" placeholder="Transaction Key"><span class="bar"></span>
+                                    </div>
+                                    <h4 class="font-weight-bold">Account Type:</h4>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control required" id="" placeholder="Account Type"><span class="bar"></span>
+                                    </div>
+                                </fieldset>
+                                <button type="button" class="btn btn-outline-success text-center col-12 savePayment">Save</button> 
                             </div>
                         </div>
+                        
+                          <div class="card col-xl-5 px-5 mr-3 ml-3" id="production" style="display: none;">
+                            <div class="card-body">
+                                <fieldset class="floating-labels">
+                                <h1 class="text-center">Production</h1>
+                                    <h4 class="font-weight-bold">Login ID:</h4>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control required" id="" placeholder="Login ID"><span class="bar"></span>
+                                    </div>
+                                    <h4 class="font-weight-bold">Transaction Key:</h4>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control required" id="" placeholder="Transaction Key"><span class="bar"></span>
+                                    </div>
+                                    <h4 class="font-weight-bold">Account Type:</h4>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control required" id="" placeholder="Account Type"><span class="bar"></span>
+                                    </div>
+                                </fieldset>
+                                <button type="button" class="btn btn-outline-success text-center col-12 savePayment">Save</button> 
+                            </div>
+                          </div>
                     </div>
                 <!-- ============================================================== -->
                 <!-- End Info box -->
@@ -878,9 +891,21 @@
     <!-- Chart JS -->
     <script src="dist/js/dashboard1.js"></script>
     <script src="https://desk.zoho.com/portal/api/feedbackwidget/171918000001748149?orgId=642064172&displayType=popout"></script>
+    <script src="assets/node_modules/toast-master/js/jquery.toast.js"></script>
+    <script src="dist/js/pages/toastr.js"></script>
 
     <!-- Sweet-Alert  -->
     <script src="assets/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="assets/node_modules/switchery/dist/switchery.min.js"></script>
+    <script>
+        $(function () {
+            // Switchery
+            var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
+            $('.js-switch').each(function () {
+                new Switchery($(this)[0], $(this).data());
+            });
+        });
+    </script>
     <script src="assets/node_modules/sweetalert2/sweet-alert.init.js"></script>
     <script type="text/javascript">
         // checkbox turn to green
@@ -952,7 +977,16 @@
         $('#punchInButtonProfile').show();
         });
     </script>
-
+    <script>
+        function myFunction() {
+        var x = document.getElementById("production");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+        }
+    </script>
 </body>
 
 </html>

@@ -3778,5 +3778,69 @@ $(function() {
                     stack: 6
                });
           });
+              
+          $(".switchSandbox").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Ravi switched to Production',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Ravi switched to Production',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'Ravi switched to Production',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });
+              
+          $(".savePayment").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Ravi saved a payment transaction key',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Ravi saved a payment transaction key',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'Ravi saved a payment transaction key',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });
 });
           
