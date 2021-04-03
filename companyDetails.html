@@ -24,6 +24,8 @@
     <link href="assets/node_modules/jquery-asColorPicker-master/dist/css/asColorPicker.css" rel="stylesheet">
     <!-- Date picker plugins css -->
      <link href="assets/node_modules/toast-master/css/jquery.toast.css" rel="stylesheet">
+     <!-- Dropzone css -->
+     <link href="assets/node_modules/dropzone-master/dist/dropzone.css" rel="stylesheet" type="text/css">
 
     <!--alerts CSS -->
     <link href="assets/node_modules/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
@@ -390,7 +392,7 @@
                                                 </div>
                                             </div>
         
-                                            <div class="form-group m-b-40 col-md-6 mb-3">
+                                            <div class="form-group m-b-40 col-md-3 mb-3">
                                                 <h4 for="validationCustom03" class="font-weight-bolder boldText">Outbound Notification Email</h4>
                                                 <input type="email" class="form-control required" id="validationCustom03" required><span class="bar"></span>
                                                 <div class="valid-feedback">
@@ -398,17 +400,6 @@
                                                 </div>
                                                 <div class="invalid-feedback">
                                                     Please provide a valid email.
-                                                </div>
-                                            </div>
-        
-                                            <div class="form-group m-b-40 col-md-6 mb-3">
-                                                <h4 for="validationCustom05" class="font-weight-bolder boldText">Password</h4>
-                                                <input type="password" class="form-control required" id="validationCustom05" required><span class="bar"></span>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Please provide a valid password.
                                                 </div>
                                             </div>
         
@@ -422,20 +413,16 @@
                                                     Please upload your picture.
                                                 </div>
                                             </div>
-        
-                                            <div class="form-group m-b-40 col-md-3 mb-3">
-                                                <p class="boldText">Upload Picture</p>
-                                                <input type="file" class="form-control" id=""><span class="bar"></span>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Please upload your picture.
-                                                </div>
-                                            </div>
-                                            
-                                            <button class="btn btn-lg mt-4 btn-outline-success col-12 saveCompanyDetails" type="submit">Save</button>
                                     </form>
+                                    <div id="uploadBox" class="col-md-12">
+                                        <h4 for="" class="font-weight-bolder boldText">Upload Logo</h4>
+                                            <form action="#" class="dropzone">
+                                                <div class="fallback">
+                                                    <input name="file" type="file" multiple />
+                                                </div>
+                                            </form>
+                                    </div>
+                                    <button class="btn btn-lg mt-4 btn-outline-success col-12 saveCompanyDetails" type="submit">Save</button>
                                 <script>
                                 // Example starter JavaScript for disabling form submissions if there are invalid fields
                                 (function() {
@@ -563,6 +550,9 @@
         $('#punchInButtonProfile').show();
         });
     </script>
+    <script src="assets/node_modules/toast-master/js/jquery.toast.js"></script>
+    <script src="dist/js/pages/toastr.js"></script>
+    <script src="assets/node_modules/dropzone-master/dist/dropzone.js"></script>
     <!-- Plugin JavaScript -->
     <script src="assets/node_modules/moment/moment.js"></script>
     <script src="assets/node_modules/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
@@ -756,8 +746,6 @@
         }
     });
     </script>
-    <script src="assets/node_modules/toast-master/js/jquery.toast.js"></script>
-    <script src="dist/js/pages/toastr.js"></script>
 
 </body>
 

@@ -19,6 +19,8 @@
     <link href="dist/css/pages/floating-label.css" rel="stylesheet">
     <link href="dist/css/form.css" rel="stylesheet">
     <link href="assets/node_modules/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <!-- Dropzone css -->
+    <link href="assets/node_modules/dropzone-master/dist/dropzone.css" rel="stylesheet" type="text/css">
 
     <!--alerts CSS -->
     <link href="assets/node_modules/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
@@ -349,6 +351,13 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="card">
+                            <div class="card-body"> <small class="text-muted">Email address </small>
+                                <h6>hannagover@gmail.com</h6> 
+                                <small class="text-muted p-t-30 db">Phone</small>
+                                <h6>+91 654 784 547</h6>
+                            </div>
+                        </div>
                     </div>
                     <!-- Column -->
                     <!-- Column -->
@@ -428,20 +437,16 @@
                                                 </div>
         
                                             </div>
-        
-                                            <div class="form-group m-b-40 col-md-6 mb-3">
-                                                <p class="boldText">Upload Picture</p>
-                                                <input type="file" class="form-control" id=""><span class="bar"></span>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Please upload your picture.
-                                                </div>
-                                            </div>
-                                            
-                                            <button class="btn btn-lg mt-4 btn-outline-success col-12 saveProfile" type="submit">Save</button>
                                     </form>
+                                    <div id="uploadBox" class="col-md-12">
+                                        <h4 for="" class="font-weight-bolder boldText">Upload Picture</h4>
+                                            <form action="#" class="dropzone">
+                                                <div class="fallback">
+                                                    <input name="file" type="file" multiple />
+                                                </div>
+                                            </form>
+                                    </div>
+                                    <button class="btn btn-lg mt-4 btn-outline-success col-12 saveProfile" type="submit">Save</button>
                                 <script>
                                 // Example starter JavaScript for disabling form submissions if there are invalid fields
                                 (function() {
@@ -504,6 +509,9 @@
     <!-- ============================================================== -->
     <!-- This page plugins -->
     <!-- ============================================================== -->
+    <script src="assets/node_modules/toast-master/js/jquery.toast.js"></script>
+    <script src="dist/js/pages/toastr.js"></script>
+    <script src="assets/node_modules/dropzone-master/dist/dropzone.js"></script>
     <!--morris JavaScript -->
     <script src="assets/node_modules/raphael/raphael-min.js"></script>
     <script src="assets/node_modules/morrisjs/morris.min.js"></script>
@@ -572,8 +580,6 @@
         $('#punchInButtonProfile').show();
         });
     </script>
-    <script src="assets/node_modules/toast-master/js/jquery.toast.js"></script>
-    <script src="dist/js/pages/toastr.js"></script>
 
 </body>
 
