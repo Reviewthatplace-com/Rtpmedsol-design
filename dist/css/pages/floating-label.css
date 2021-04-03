@@ -81,7 +81,10 @@ File: scss
   background: #fb9678;
   transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all; }
+  -webkit-transition: 0.2s ease all;
+  border-radius: 0px;
+  border-bottom: 1px solid #e9ecef;
+}
 
 .floating-labels .bar:before {
   left: 50%; }

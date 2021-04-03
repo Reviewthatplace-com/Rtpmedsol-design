@@ -22362,7 +22362,7 @@ File: scss
      margin-bottom: 30px;
    }
    
-   .floating-labels .form-control[type='text'], .form-control[type='email'], .form-control[type='number'], .form-control[type='tel'], .form-control[type='password'], .form-control[type='date'], 
+   .floating-labels .form-control[type='text'], .form-control[type='email'], .form-control[type='number'], .form-control[type='tel'], .form-control[type='password'], .form-control[type='date'],
    select.form-control , textarea.form-control 
    {
      padding: 5px 5px 5px 0px !important;
