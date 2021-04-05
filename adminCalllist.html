@@ -490,6 +490,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="text-right">
+                                <button type="button" class="btn waves-effect waves-light btn-success mb-2" data-toggle="modal" data-target="#callstatusModal">Manage Call List Status Type</button>
                                 <button type="button" class="btn waves-effect waves-light btn-success mb-2" data-toggle="modal" data-target="#addListModal">Add</button>
                             </div>
                             <div class="table-responsive">
@@ -510,7 +511,7 @@
                                                         <span class="sr-only">Toggle Dropdown</span>
                                                     </button>
                                                     <div class="dropdown-menu animated flipInY">
-                                                        <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#callstatusModal">Call Status</a>
+                                                        <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#assignCallStatusTypeModal">Call Status</a>
                                                         <a class="dropdown-item Delete" href="javascript:void(0)">Delete</a>
                                                     </div>
                                                 </div> 
@@ -854,7 +855,6 @@
                             <table id="config-table3" class="table display table-bordered table-striped no-wrap">
                                 <thead>
                                     <tr>
-                                        <th>Active</th>
                                         <th>Pending/Completed</th>
                                         <th>Action</th>
                                         <th>Color Code</th>
@@ -864,16 +864,13 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <span class="activateCallStatusType DeactivateCallStatusType"><input type="checkbox" class="js-switch" checked  data-color="#00c292" /></span>
-                                        </td>
-                                        <td>
                                             <span class="activateCallStatusType"><input type="checkbox" class="js-switch" checked  data-color="#00c292" /></span>
                                         </td>
                                         <td>
                                             <button type="button" class="btn btn-danger Delete">Delete</button>
                                         </td>
                                         <td>
-                                            <input type="text" class="complex-colorpicker form-control" value="#fa7a7a" style="width: 75% !important;" /> 
+                                            <input type="text" disabled class="complex-colorpicker form-control" value="#fa7a7a" style="width: 75% !important;" /> 
                                         </td>
                                         <td> 
                                             <input type="text" class="form-control" id="" placeholder="Walk In"><span class="bar"></span>
@@ -888,6 +885,54 @@
     <!-- /.modal-content -->
     </div>
     <!-- Call Status Modal -->
+
+
+    <!-- Call Status Modal -->
+    <div class="modal fade" id="assignCallStatusTypeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header"> 
+                    <h4 class="modal-title" id="myLargeModalLabel">Assign Call Status Type</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >×</button>
+                </div>
+                    <div class="modal-body">     
+                        <div class="table-responsive">
+                            <table id="config-table3" class="table display table-bordered table-striped no-wrap">
+                                <thead>
+                                    <tr>
+                                        <th>Active</th>
+                                        <th>Pending/Completed</th>
+                                        <th>Color Code</th>
+                                        <th>Call Status Type</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <span class="activateCallStatusType DeactivateCallStatusType"><input type="checkbox" class="js-switch" checked  data-color="#00c292" /></span>
+                                        </td>
+                                        <td>
+                                            Pending
+                                        </td>
+                                        <td>
+                                            <input type="text" disabled class="complex-colorpicker form-control" value="#fa7a7a" style="width: 75% !important;" /> 
+                                        </td>
+                                        <td> 
+                                            <input type="text" class="form-control" id="" placeholder="Walk In"><span class="bar"></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <!-- /.modal-content -->
+    </div>
+    <!-- Call Status Modal -->
+
+
+
 
     <!-- Add Call Status Modal -->
     <div class="modal fade" id="addStatusModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none; background-color: rgba(0, 0, 0, 0.5)">
