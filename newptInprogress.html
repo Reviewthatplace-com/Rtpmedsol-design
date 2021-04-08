@@ -44,46 +44,40 @@
 
     <!-- Dashboard 1 Page CSS -->
     <link href="dist/css/pages/dashboard1.css" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
+     
+  <style>
+      .custom-legend
+  {
+    background-color: black;
+    color: white;
+    padding: 10px;
+  }
+  .fieldset-outer
+  {
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .inner-row
+  {
+    padding: 20px;
+  }
 
-<style>
+  @media only screen and (max-width: 750px){
     .custom-legend
-{
-  background-color: black;
-  color: white;
-  padding: 10px;
-}
-.fieldset-outer
-{
-  border: 1px solid black;
-  margin-top: 10px;
-  margin-bottom: 30px;
-}
-.inner-row
-{
-  padding: 20px;
-}
-
-@media only screen and (max-width: 750px){
-  .custom-legend
-{
-  padding: 8px;
-}
-.fieldset-outer
-{
-  padding: 0;
-}
-.inner-row
-{
-  padding: 18px 15px;
-}  
-}
-</style>
+  {
+    padding: 8px;
+  }
+  .fieldset-outer
+  {
+    padding: 0;
+  }
+  .inner-row
+  {
+    padding: 18px 15px;
+  }  
+  }
+  </style>
 </head>
 
 <body class="skin-blue fixed-layout">
@@ -159,7 +153,7 @@
                           <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class=""> <span class="hidden-md-down">Mark &nbsp;<i class="fa fa-angle-down"></i></span> </a>
                           <div class="dropdown-menu dropdown-menu-right animated flipInY">
                               <!-- text-->
-                              <a href="javascript:void(0)" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
+                               <a href="myProfile.html" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
                               <!-- text--> 
                               <div class="dropdown-divider"></div>
                               <!-- text-->
